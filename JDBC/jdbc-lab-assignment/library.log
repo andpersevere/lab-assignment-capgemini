@@ -1,0 +1,75 @@
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)' at line 1
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)' at line 1
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)' at line 1
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)' at line 1
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
+2019-09-13-main-INFO -DBUtil.class:Error in findBook Dao: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)' at line 1
+2019-09-13-main-INFO -DBUtil.class:Current Working directory is D:\JEECloudDS\JDBCLabBook/src/main/resources/
+2019-09-13-main-INFO -DBUtil.class:Property File loaded : 
+2019-09-13-main-INFO -DBUtil.class:connection Obtained! : com.mysql.jdbc.JDBC4Connection@23ab930d
+2019-09-13-main-INFO -DBUtil.class:Connection Obtained.
