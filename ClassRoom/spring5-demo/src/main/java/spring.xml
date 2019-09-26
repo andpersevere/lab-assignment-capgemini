@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+
+	<context:component-scan
+		base-package="com.cg.spring5demo">
+	</context:component-scan>
+
+	<bean id="emp" class="com.cg.spring5demo.service.Employee">
+		<property name="empName" value="Tushar">
+		</property>
+		<property name="projectList">
+			<list>
+				<ref bean="projectA" />
+				<ref bean="projectB" />
+				<ref bean="projectC" />
+			</list>
+		</property>
+		<property name="departmentSet">
+			<set>
+				<ref bean="departmentA" />
+				<ref bean="departmentB" />
+				<ref bean="departmentC" />
+				<ref bean="departmentA"/>
+			</set>
+		</property>
+	</bean>
+	
+	
+<!-- project auto wiring -->
+	<bean id="projectA" class="com.cg.spring5demo.service.Project">
+		<property name="projectId" value="201">
+		</property>
+	</bean>
+	<bean id="projectB" class="com.cg.spring5demo.service.Project">
+		<property name="projectId" value="202">
+		</property>
+	</bean>
+	<bean id="projectC" class="com.cg.spring5demo.service.Project">
+		<property name="projectId" value="203">
+		</property>
+	</bean>
+	
+	
+	
+<!-- department auto wiring -->
+	<bean id="departmentA"
+		class="com.cg.spring5demo.service.Department">
+		<property name="departmentId" value="123">
+		</property>
+	</bean>
+	<bean id="departmentB"
+		class="com.cg.spring5demo.service.Department">
+		<property name="departmentId" value="124">
+		</property>
+	</bean>
+	<bean id="departmentC"
+		class="com.cg.spring5demo.service.Department">
+		<property name="departmentId" value="125">
+		</property>
+	</bean>
+</beans>
