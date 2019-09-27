@@ -1,9 +1,14 @@
 package com.cg.springdemo.controller;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,44 +20,96 @@ import com.cg.springdemo.service.ProductService;
 
 @Controller
 public class ProductController {
- 
+
 	@Autowired
 	ProductService productService;
-	
-	@RequestMapping(value="/home", method=RequestMethod.GET)
+
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String homePage() {
-	
-		return "home";
+		return "HomePage";
 	}
-	@RequestMapping(value="/addPage", method=RequestMethod.GET)
-	public String addProduct(@ModelAttribute("myForm") Product pro) {
-		return "AddProduct";
+
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	public String addProductPage(@ModelAttribute("myForm") Product pro, Map<String, Object> model) {
+		List<String> types = new ArrayList<String>();
+		types.add("SELECT");
+		types.add("Electricity");
+		types.add("Grocery");
+		types.add("Mobile");
+
+		List<String> yesNo = new ArrayList<String>();
+		yesNo.add("Yes");
+		yesNo.add("No");
+
+		List<String> features = new ArrayList<String>();
+		features.add("5G ");
+		features.add("4G ");
+		features.add("3G ");
+		features.add("2G ");
+
+		model.put("dataItem", types);
+		model.put("radioDataItem", yesNo);
+		model.put("featureDataItem", features);
+
+		return "AddProductPage";
+	}
+
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	public String searchPage() {
+		return "SearchProductPage";
 	}
 	
-	@RequestMapping(value="/pageSubmit", method=RequestMethod.POST)
-	public String addDate(@ModelAttribute("myForm") Product pro){
+
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public String deletePage() {
+		return "DeleteProductPage";
+	}
+
+
+	
+	
+	
+	/************Add Data to Database**************/
+	@RequestMapping(value = "/pageSubmit", method = RequestMethod.POST)
+	public String addData(@Valid @ModelAttribute("myForm") Product pro, BindingResult result) {
 		System.out.println(pro);
-		productService.addProduct(pro);
-		return "home";
+		if (result.hasErrors()) {
+			return "AddProductPage";
+		} else {
+			productService.addProduct(pro);
+			return "HomePage";
+		}
 	}
-	@RequestMapping(value="/showAll", method = RequestMethod.GET) 
+	/************ Get All Data **************/
+	@RequestMapping(value = "/showAll", method = RequestMethod.GET)
 	public ModelAndView getAllData() {
 		List<Product> myList = productService.findAll();
-		
-		return new ModelAndView("ShowProduct", "data", myList );
-		
+		return new ModelAndView("ShowProductPage", "data", myList);
 	}
-	@RequestMapping(value="/delete", method=RequestMethod.GET)
-	public String deletePage() {
-		
-		return "DeleteProduct";
+	/************ Get Searched Data **************/
+	@RequestMapping(value = "/searchProduct", method = RequestMethod.GET)
+	public ModelAndView searchProduct(@RequestParam("productId") int productId) {
+		List<Product> myList = new ArrayList<>();
+		myList.add(productService.findByProductId(productId));
+		if (myList.get(0) == null) {
+			return new ModelAndView("ProductNotFoundPage");
+		} else {
+			return new ModelAndView("ShowProductPage", "data", myList);
+		}
+
 	}
-	
-	@RequestMapping(value="/deleteData", method=RequestMethod.POST)
-	public String deleteData(@RequestParam("pid") int productId) {
+	/************ Get database after deletion of data **************/
+	@RequestMapping(value = "/deleteData", method = RequestMethod.GET)
+	public ModelAndView deleteData(@RequestParam("pid") int productId) {
 		System.out.println(productId);
-		productService.remove(productId);
-		//return new ModelAndView("DeleteProductt", "", modelObject);
-		return "redirect:/showAll";
+
+		if (productService.remove(productId) != null) {
+			return new ModelAndView("ProductNotFoundPage");
+		} else {
+			List<Product> myList = productService.findAll();
+			return new ModelAndView("ShowProductPage", "data", myList);
+		}
 	}
+
+	
 }

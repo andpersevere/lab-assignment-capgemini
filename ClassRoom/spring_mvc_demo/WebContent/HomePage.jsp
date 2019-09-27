@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<% response.sendRedirect("HomePage"); %>>
+	Welcome to Product Managements
+	<a href="add">Add Product</a>
+	<a href="showAll">Show Product</a>
+	<a href="delete">Delete Product</a>
+	<a href="search">Search Product</a>
+	<a href="update">Update Product</a>
 </body>
 </html>

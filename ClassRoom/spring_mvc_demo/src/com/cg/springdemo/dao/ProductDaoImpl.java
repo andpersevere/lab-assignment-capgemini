@@ -1,8 +1,10 @@
 package com.cg.springdemo.dao;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -10,41 +12,40 @@ import com.cg.springdemo.dto.Product;
 
 @Repository("productDao")
 public class ProductDaoImpl implements ProductDao{
-
-	List<Product> productList=new ArrayList<Product>();
 	
+	@PersistenceContext
+	EntityManager manager;
 	
+	@Override
 	public Product addProduct(Product product) {
-		productList.add(product);
+		manager.persist(product);
+		return product;
+	}
+
+	@Override
+	public List<Product> findAll() {
+		Query query=manager.createQuery("FROM Product");
+		List<Product> productList =  query.getResultList();
+		return productList;
+	}
+
+	@Override
+	public Product findByProductId(Integer productId) {
+		Product product=manager.find(Product.class, productId);
+		return product;
+	}
+
+	@Override
+	public Product remove(Integer productId) {
+		Product product=manager.find(Product.class, productId);
+		
+		if(product!=null) {
+			manager.remove(product);
+			System.out.println("Admin has been removed");
+		}
+		
 		return product;
 	}
 
 	
-	public List<Product> findAll() {
-		
-		return productList;
-	}
-
-	
-	public Product findByProductId(Integer productId) {
-		Product foundPro;
-		Iterator<Product> iterator = productList.iterator();
-		while (iterator.hasNext()) {
-			foundPro = (Product) iterator.next();
-			if(foundPro.getProductId()==productId)
-				return foundPro;
-		}
-		return null;
-	}
-
-
-	@Override
-	public Product remove(Integer productId) {
-		for (Product product:productList) {
-			if(product.getProductId().equals(productId)) {
-				productList.remove(product);
-			}
-		}
-		return null;
-	}
 }
